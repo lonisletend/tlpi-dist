@@ -7,5 +7,5 @@ int main(int argc, char *argv[]){
 	printf("getppid() = %d\n",(int)getppid());
 	return 0;
 
-}
+}y
 
