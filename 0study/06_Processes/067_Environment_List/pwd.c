@@ -28,7 +28,7 @@ int main(int argc, char const *argv[])
 
 int pwdPatch(char* ex){
     char a[10]="PWD";
-    for(int i=0;i<3;i++){
+    for(int i=0;i<strlen(a);i++){
         if(ex[i] != a[i])
             return 0;
     }
@@ -36,7 +36,7 @@ int pwdPatch(char* ex){
 }
 int oldpwdPatch(char* ex){
     char a[10]="OLDPWD";
-    for(int i=0;i<6;i++){
+    for(int i=0;i<strlen(a);i++){
         if(ex[i] != a[i])
             return 0;
     }
