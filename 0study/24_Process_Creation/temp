@@ -1,0 +1,4 @@
+T:T.o 
+	gcc $(INCLUDE) T.o error_functions.o -o T
+T.o:T.c error_functions.o
+	gcc $(INCLUDE) T.c error_functions.c -c
