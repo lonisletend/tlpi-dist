@@ -1,6 +1,11 @@
 
 INCLUDE= -I ../../lib
 
+exit_handlers:exit_handlers.o 
+	gcc $(INCLUDE) exit_handlers.o error_functions.o -o exit_handlers
+exit_handlers.o:exit_handlers.c error_functions.o
+	gcc $(INCLUDE) exit_handlers.c error_functions.c -c
+
 fork_whos_on_first:fork_whos_on_first.o 
 	gcc $(INCLUDE) fork_whos_on_first.o error_functions.o get_num.o -o fork_whos_on_first
 fork_whos_on_first.o:fork_whos_on_first.c error_functions.o
