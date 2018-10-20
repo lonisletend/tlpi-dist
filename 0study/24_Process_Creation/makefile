@@ -1,6 +1,11 @@
 
 INCLUDE= -I ../../lib
 
+fork_stdio_buf:fork_stdio_buf.o 
+	gcc $(INCLUDE) fork_stdio_buf.o error_functions.o -o fork_stdio_buf
+fork_stdio_buf.o:fork_stdio_buf.c error_functions.o
+	gcc $(INCLUDE) fork_stdio_buf.c error_functions.c -c
+
 exit_handlers:exit_handlers.o 
 	gcc $(INCLUDE) exit_handlers.o error_functions.o -o exit_handlers
 exit_handlers.o:exit_handlers.c error_functions.o
