@@ -1,6 +1,11 @@
 
 INCLUDE= -I ../../lib
 
+multi_wait:multi_wait.o 
+	gcc $(INCLUDE) multi_wait.o error_functions.o get_num.o curr_time.o -o multi_wait
+multi_wait.o:multi_wait.c error_functions.o
+	gcc $(INCLUDE) multi_wait.c error_functions.c get_num.c curr_time.c -c
+
 fork_stdio_buf:fork_stdio_buf.o 
 	gcc $(INCLUDE) fork_stdio_buf.o error_functions.o -o fork_stdio_buf
 fork_stdio_buf.o:fork_stdio_buf.c error_functions.o
