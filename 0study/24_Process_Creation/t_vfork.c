@@ -1,9 +1,9 @@
 #include "tlpi_hdr.h"
 
-int main(int argc, char const *argv[])
+int main(int argc, char const* argv[])
 {
     int istack = 222;
-    switch(vfork()){
+    switch (vfork()) {
     case -1:
         errExit("vfork");
     case 0:
